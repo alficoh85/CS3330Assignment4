@@ -36,7 +36,11 @@ public class Grid {
                 CellComponents left, right, up, down;
 
                 if (j == 0) {
+<<<<<<< HEAD
                     left = (i == exitRow) ? CellComponents.EXIT : CellComponents.randomWallOrAperture();
+=======
+                    left = (i == exitRow) ? CellComponents.EXIT : CellComponents.randomExceptExit();
+>>>>>>> fdba51e92c42e261a8a5bf37da76d5b6098ff758
                 } else {
                     left = mirror(cells.get(j - 1).getRight());
                 }
@@ -70,4 +74,8 @@ public class Grid {
     private static CellComponents mirror(CellComponents neighborSide) {
         return neighborSide; 
     }
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> fdba51e92c42e261a8a5bf37da76d5b6098ff758

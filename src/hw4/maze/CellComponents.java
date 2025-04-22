@@ -1,5 +1,6 @@
 package hw4.maze;
 
+<<<<<<< HEAD
 import java.util.Random;
 
 /**
@@ -20,4 +21,8 @@ public enum CellComponents {
 			return APERTURE;
 		}
 	}
+=======
+public enum CellComponents {
+
+>>>>>>> fdba51e92c42e261a8a5bf37da76d5b6098ff758
 }

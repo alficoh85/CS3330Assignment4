@@ -32,4 +32,8 @@ public class Player {
     public String toString() {
         return "Player [currentCell=" + currentCell + ", currentRow=" + currentRow + "]";
     }
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> fdba51e92c42e261a8a5bf37da76d5b6098ff758
