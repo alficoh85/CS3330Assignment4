@@ -35,25 +35,21 @@ public class Grid {
             for (int j = 0; j < size; j++) {
                 CellComponents left, right, up, down;
 
-                // Left Component
                 if (j == 0) {
                     left = (i == exitRow) ? CellComponents.EXIT : CellComponents.randomExceptExit();
                 } else {
                     left = mirror(cells.get(j - 1).getRight());
                 }
 
-                // Up Component
                 if (i == 0) {
                     up = CellComponents.randomWallOrAperture();
                 } else {
                     up = mirror(rows.get(i - 1).getCells().get(j).getDown());
                 }
 
-                // Randomize right/down first
                 right = CellComponents.randomWallOrAperture();
                 down = CellComponents.randomWallOrAperture();
 
-                // Ensure at least one APERTURE
                 if (left != CellComponents.APERTURE && right != CellComponents.APERTURE
                         && up != CellComponents.APERTURE && down != CellComponents.APERTURE) {
                     switch (rand.nextInt(4)) {
@@ -71,8 +67,7 @@ public class Grid {
 
         return new Grid(rows);
     }
-
     private static CellComponents mirror(CellComponents neighborSide) {
-        return neighborSide; // Maintain consistency
+        return neighborSide; 
     }
 } 
