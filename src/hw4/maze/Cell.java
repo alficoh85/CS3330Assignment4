@@ -9,7 +9,7 @@ public class Cell {
 	private CellComponents up;
 	private CellComponents down;
 	
-	/** Default constructor, creates a Cell object
+	/** Parameterized constructor, creates a Cell object
 	 * @param left - The cell component located on the west part of the cell
 	 * @param right - The cell component located on the east part of the cell
 	 * @param up - The cell component located on the north part of the cell
