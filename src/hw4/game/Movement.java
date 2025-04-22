@@ -1,4 +1,4 @@
-package hw4.maze;
+package hw4.game;
 
 public enum Movement {
 
