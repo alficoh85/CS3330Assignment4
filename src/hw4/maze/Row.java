@@ -2,6 +2,7 @@ package hw4.maze;
 
 import java.util.ArrayList;
 
+/** The Row class contains a row of Cell objects. */
 public class Row {
 	private ArrayList<Cell> cells;
 	
