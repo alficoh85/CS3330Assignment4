@@ -1,6 +1,7 @@
 package hw4.game;
 
 import java.util.ArrayList;
+
 import hw4.maze.*;
 import hw4.player.*;
 
@@ -50,7 +51,7 @@ public class Game {
                     break;
                 case LEFT:
                     if (cell.getLeft() == CellComponents.EXIT) {
-                        player.moveTo(null, null); 
+                        player.moveTo(null, null); // escape success
                         return true;
                     } else if (cell.getLeft() == CellComponents.APERTURE) {
                         player.moveTo(row, row.getCells().get(colIndex - 1));
