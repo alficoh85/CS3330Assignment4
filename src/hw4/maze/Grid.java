@@ -3,17 +3,24 @@ package hw4.maze;
 import java.util.ArrayList;
 import java.util.Random;
 
+/** The Grid class creates a grid using rows of cells. */
 public class Grid {
     private ArrayList<Row> rows;
 
+    /** Parameterized constructor, creates a Row object
+     * @param rows - The list of rows to make into a grid */
     public Grid(ArrayList<Row> rows) {
         this.rows = rows;
     }
 
+    /** Accessor method for rows
+     * @return An ArrayList of Row objects in the grid */
     public ArrayList<Row> getRows() {
         return rows;
     }
 
+    /** 
+     * @param rows - The ArrayList of Row objects to set as the new grid */
     public void setRows(ArrayList<Row> rows) {
         this.rows = rows;
     }
@@ -23,6 +30,9 @@ public class Grid {
         return "Grid [rows=" + rows + "]";
     }
     
+    /** Creates a grid of a given size with rows of Cell objects that are randomly generated
+     * @param size - The size of the grid to generate
+     * @return A grid made of rows of randomly-generated Cell objects with an exit on the leftmost column */
     public static Grid createRandomGrid(int size) {
         if (size < 3 || size > 7) return null;
 
@@ -67,6 +77,7 @@ public class Grid {
 
         return new Grid(rows);
     }
+    
     private static CellComponents mirror(CellComponents neighborSide) {
         return neighborSide; 
     }

@@ -80,4 +80,7 @@ public class Game {
     public Grid createRandomGrid(int size) {
         return Grid.createRandomGrid(size);
     }
+    
+    // Make displayBoard method to print the grid visualization
+    //Add boolean to detect if you have won and update play method
 }
