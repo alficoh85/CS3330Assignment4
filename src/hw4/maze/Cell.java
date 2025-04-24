@@ -28,10 +28,15 @@ public class Cell {
 		return left;
 	}
 
-	/** Mutator method for left
+	/** Mutator method for left, sets to WALL if null
 	 * @param left - Tells what component to set to the left of the cell */
 	public void setLeft(CellComponents left) {
-		this.left = left;
+		if (left == null) {
+			this.left = CellComponents.WALL;
+		}
+		else {
+			this.left = left;
+		}
 	}
 
 	/** Accessor method for right
@@ -40,10 +45,15 @@ public class Cell {
 		return right;
 	}
 
-	/** Mutator method for right
+	/** Mutator method for right, sets to WALL if null
 	 * @param right - Tells what component to set to the right of the cell */
 	public void setRight(CellComponents right) {
-		this.right = right;
+		if (right == null) {
+			this.right = CellComponents.WALL;
+		}
+		else {
+			this.right = right;
+		}
 	}
 
 	/** Accessor method for up
@@ -52,10 +62,15 @@ public class Cell {
 		return up;
 	}
 
-	/** Mutator method for up
+	/** Mutator method for up, sets to WALL if null
 	 * @param up - Tells what component to set for the north part of the cell */
 	public void setUp(CellComponents up) {
-		this.up = up;
+		if (up == null) {
+			this.up = CellComponents.WALL;
+		}
+		else {
+			this.up = up;
+		}
 	}
 
 	/** Accessor method for down
@@ -64,10 +79,15 @@ public class Cell {
 		return down;
 	}
 
-	/** Mutator method for down
+	/** Mutator method for down, sets to WALL if null
 	 * @param down - Tells what component to set for the south part of the cell */
 	public void setDown(CellComponents down) {
-		this.down = down;
+		if (down == null) {
+			this.down = CellComponents.WALL;
+		}
+		else {
+			this.down = down;
+		}
 	}
 
 	@Override
