@@ -78,6 +78,18 @@ public class Grid {
         return new Grid(rows);
     }
     
+    /** Returns a row at a specific index
+     * @param index - The index to get the row from
+     * @return The Row object at the specified index in the ArrayList of Rows */
+    public Row getRowAtIndex(int index) {
+    	try {
+    		return rows.get(index);
+    	}
+    	catch (IndexOutOfBoundsException | NullPointerException e) {
+            return null;
+    	}
+    }
+    
     private static CellComponents mirror(CellComponents neighborSide) {
         return neighborSide; 
     }

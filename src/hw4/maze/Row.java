@@ -28,4 +28,16 @@ public class Row {
 	public String toString() {
 		return "Row [cells=" + cells + "]";
 	}
+	
+    /** Returns a cell at a specific index
+     * @param index - The index to get the cell from
+     * @return The Cell object at the specified index in the ArrayList of Cells */
+    public Cell getCellAtIndex(int index) {
+    	try {
+    		return cells.get(index);
+    	}
+    	catch (IndexOutOfBoundsException | NullPointerException e) {
+            return null;
+    	}
+    }
 }
